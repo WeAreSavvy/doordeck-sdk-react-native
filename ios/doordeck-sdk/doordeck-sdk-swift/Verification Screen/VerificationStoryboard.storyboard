@@ -13,7 +13,7 @@
         <!--Verification View Controller-->
         <scene sceneID="1u0-Vs-B4g">
             <objects>
-                <viewController storyboardIdentifier="VerificationNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oSH-Yq-yNP" customClass="VerificationViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerificationNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oSH-Yq-yNP" customClass="VerificationViewController" customModule="SavvyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ac-Bm-GLK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,6 +128,14 @@
                                 <connections>
                                     <action selector="sendCodeToServer:" destination="oSH-Yq-yNP" eventType="touchUpInside" id="YHe-mo-hIx"/>
                                 </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yR-FZ-saP" userLabel="Times">
+                                <rect key="frame" x="361" y="105" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTJ-Ka-k3Q" userLabel="Close Button">
+                                <rect key="frame" x="344" y="88" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

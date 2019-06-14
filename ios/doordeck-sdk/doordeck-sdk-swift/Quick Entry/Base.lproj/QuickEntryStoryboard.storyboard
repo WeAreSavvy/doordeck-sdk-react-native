@@ -13,7 +13,7 @@
         <!--Quick Entry View Controller-->
         <scene sceneID="4Fx-42-WKk">
             <objects>
-                <viewController storyboardIdentifier="QuickEntryNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xy-cO-xXT" customClass="QuickEntryViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuickEntryNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xy-cO-xXT" customClass="QuickEntryViewController" customModule="SavvyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f4B-ip-Ybg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,13 +29,13 @@
         <!--Bottom View Controller-->
         <scene sceneID="Dsg-rc-ccz">
             <objects>
-                <viewController restorationIdentifier="bottomViewNFC" storyboardIdentifier="bottomViewNFC" id="QPZ-G4-Ea5" customClass="BottomViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="bottomViewNFC" storyboardIdentifier="bottomViewNFC" id="QPZ-G4-Ea5" customClass="BottomViewController" customModule="SavvyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5D-u4-FUB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfO-S6-25y">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfO-S6-25y">
+                                <rect key="frame" x="0.0" y="90" width="414" height="646"/>
                                 <connections>
                                     <action selector="nfcScanClicked:" destination="QPZ-G4-Ea5" eventType="touchUpInside" id="Jh0-5g-wMg"/>
                                 </connections>
@@ -69,6 +69,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nii-pY-uG7" userLabel="Times">
+                                <rect key="frame" x="314" y="66" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4R-mw-Un7" userLabel="Close Button">
+                                <rect key="frame" x="297" y="49" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="close" destination="QPZ-G4-Ea5" eventType="touchUpInside" id="xMW-kI-0SJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -91,6 +102,7 @@
                         <viewLayoutGuide key="safeArea" id="Ur5-gg-LR5"/>
                     </view>
                     <connections>
+                        <outlet property="CloseImage" destination="nii-pY-uG7" id="teQ-av-QmN"/>
                         <outlet property="QRCodeImage" destination="hgf-nf-dg4" id="UK4-PL-Dah"/>
                         <outlet property="bottomLabel" destination="fKQ-Xj-AQn" id="ZcS-Np-N6T"/>
                         <outlet property="descriptionLabel" destination="2RS-9X-owO" id="leR-QM-Me5"/>
@@ -99,12 +111,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaE-3X-jMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4037.5999999999999" y="1647.5262368815593"/>
+            <point key="canvasLocation" x="4036.2318840579715" y="1646.7391304347827"/>
         </scene>
         <!--Bottom View ControllerQR-->
         <scene sceneID="Wlp-4j-NmA">
             <objects>
-                <viewController storyboardIdentifier="bottomViewQR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irD-Ip-HAZ" customClass="BottomViewControllerQR" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bottomViewQR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irD-Ip-HAZ" customClass="BottomViewControllerQR" customModule="SavvyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xVG-TD-7Xb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,6 +154,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diJ-lF-jLK" userLabel="Times">
+                                <rect key="frame" x="307" y="76" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgc-mH-Roi" userLabel="Close Button">
+                                <rect key="frame" x="290" y="59" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="close" destination="irD-Ip-HAZ" eventType="touchUpInside" id="S9V-BU-a3X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

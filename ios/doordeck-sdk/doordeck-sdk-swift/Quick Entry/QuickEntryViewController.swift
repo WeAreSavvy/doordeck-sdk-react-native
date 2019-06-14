@@ -14,7 +14,7 @@ class QuickEntryViewController: UIViewController {
     var delegate: DoordeckProtocol?
     var readerType: Doordeck.ReaderType = Doordeck.ReaderType.automatic
     var sodium: SodiumHelper!
-    
+    @IBOutlet weak var closeButton: UIButton!
     
     fileprivate let quickStoryboard = "QuickEntryStoryboard"
     fileprivate let bottomNFCView = "bottomViewNFC"
@@ -131,5 +131,8 @@ extension QuickEntryViewController: quickEntryDelegate {
         }
         
     }
-    
+  
+    @IBAction func close() {
+      self.dismiss(animated: true, completion: nil)
+    }
 }

@@ -20,6 +20,7 @@ class BottomViewController: UIViewController {
     @IBOutlet weak var bottomLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var QRCodeImage: UIImageView!
+    @IBOutlet weak var CloseImage: UIImageView!
     var delegate: quickEntryDelegate?
     var payloads = [NFCNDEFPayload]()
     var session: NFCNDEFReaderSession?
@@ -44,6 +45,7 @@ class BottomViewController: UIViewController {
         descriptionLabel.attributedText = NSAttributedString.doordeckH4(AppStrings.touchNFCMessage)
         QRCodeImage.image = UIImage(named: "QR_Tile")
         QRCodeImage.setImageColor(color: UIColor.doordeckQuaternaryColour())
+        CloseImage.image = UIImage(named: "Close_Button")
     }
     
     @objc func resetShowNFC() {
@@ -62,6 +64,10 @@ class BottomViewController: UIViewController {
             session?.begin()
             showNFCBool = false
         }
+    }
+  
+    @IBAction func close() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 @available(iOS 11, *)
