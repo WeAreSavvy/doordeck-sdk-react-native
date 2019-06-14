@@ -29,6 +29,8 @@ class LockUnlockViewController: UIViewController {
     @IBOutlet weak var lockUpdateMessage: UILabel!
     @IBOutlet weak var lockNameLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var CloseImage: UIImageView!
     
     init(_ lockVariableTemp: lockUnlockScreen,
          chain: CertificateChainClass, sodiumTemp: SodiumHelper) {
@@ -50,6 +52,10 @@ class LockUnlockViewController: UIViewController {
         readyDevice(lockDetails)
         
         dismissButton.doorButton(AppStrings.dismiss, textColour: .black, backgroundColour: .doorLightGrey(), cornerRadius: 10.0)
+    }
+  
+    func setupUI() {
+      CloseImage.image = UIImage(named: "Close_Button")
     }
     
     func connectDevice(_ lockDestils: lockUnlockScreen) {
@@ -110,5 +116,9 @@ class LockUnlockViewController: UIViewController {
         countDownTimer = Timer.after(Double(minTimer).second, { [weak self] in
             self?.dismissButtonClicked()
         })
+    }
+  
+    @IBAction func close() {
+      self.dismiss(animated: true, completion: nil)
     }
 }

@@ -25,6 +25,7 @@ class VerificationViewController: UIViewController {
     @IBOutlet weak var verificationCodeCentre: UILabel!
     @IBOutlet weak var resendButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     init(_ apiClient: APIClient, sodium: SodiumHelper) {
@@ -114,7 +115,6 @@ class VerificationViewController: UIViewController {
         }
     }
     
-    
     @IBAction func textFieldEdited(_ textField: UITextField) {
         fillOutCode(textField.text ?? "")
     }
@@ -157,6 +157,10 @@ class VerificationViewController: UIViewController {
         } else {
             verificationCode6.text = ""
         }
+    }
+  
+    @IBAction func close() {
+      self.dismiss(animated: false, completion: nil)
     }
 }
 
