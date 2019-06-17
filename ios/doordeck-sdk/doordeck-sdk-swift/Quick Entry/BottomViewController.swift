@@ -20,6 +20,7 @@ class BottomViewController: UIViewController {
     @IBOutlet weak var bottomLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var QRCodeImage: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var CloseImage: UIImageView!
     var delegate: quickEntryDelegate?
     var payloads = [NFCNDEFPayload]()
