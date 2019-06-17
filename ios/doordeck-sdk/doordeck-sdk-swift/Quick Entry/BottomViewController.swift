@@ -148,6 +148,8 @@ extension NFCNDEFPayload {
             return "Unchanged type"
         case .empty:
             return "Invalid data"
+        @unknown default:
+            return "Unknown type"
         }
     }
 }

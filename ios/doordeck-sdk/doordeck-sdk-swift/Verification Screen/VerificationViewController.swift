@@ -115,6 +115,7 @@ class VerificationViewController: UIViewController {
         }
     }
     
+    
     @IBAction func textFieldEdited(_ textField: UITextField) {
         fillOutCode(textField.text ?? "")
     }

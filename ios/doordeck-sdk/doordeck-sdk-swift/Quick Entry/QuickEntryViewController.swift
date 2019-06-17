@@ -16,6 +16,7 @@ class QuickEntryViewController: UIViewController {
     var sodium: SodiumHelper!
     @IBOutlet weak var closeButton: UIButton!
     
+    
     fileprivate let quickStoryboard = "QuickEntryStoryboard"
     fileprivate let bottomNFCView = "bottomViewNFC"
     fileprivate let bottomQRView = "bottomViewQR"
@@ -115,9 +116,9 @@ extension QuickEntryViewController: quickEntryDelegate {
         lockMan.findLock(UUID, success: { [weak self] (lock) in
             SDKEvent().event(.RESOLVE_TILE_SUCCESS)
             self?.showLockScreen(lock)
-        }) {
-            //to-do need to do something
+        }) { [weak self] in
             SDKEvent().event(.RESOLVE_TILE_FAILED)
+            self?.showLockScreenFail()
             return
         }
     }
@@ -131,8 +132,18 @@ extension QuickEntryViewController: quickEntryDelegate {
         }
         
     }
-  
-    @IBAction func close() {
-      self.dismiss(animated: true, completion: nil)
+    
+    func showLockScreenFail()  {
+        if let vc = UIStoryboard(name: lockUnlockStoryboard, bundle: nil).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
+            vc.certificateChain = self.certificateChain
+            vc.sodium = self.sodium
+            present(vc, animated: true, completion: nil)
+        }
+        
     }
+
+    @IBAction func close() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
