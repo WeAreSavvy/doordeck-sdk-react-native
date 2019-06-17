@@ -17,9 +17,9 @@ class BottomViewControllerQR: UIViewController {
     @IBOutlet weak var backgroundQRcodeImage: UIImageView!
     @IBOutlet weak var backgroundQRcodeImageCrossHair: UIImageView!
     @IBOutlet weak var QRCodeImage: UIImageView!
-    @IBOutlet weak var CloseImage: UIImageView!
     @IBOutlet weak var closeButton: UIButton!
-    
+    @IBOutlet weak var CloseImage: UIImageView!
+  
     lazy var reader = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
         $0.reader          = QRCodeReader(metadataObjectTypes: [AVMetadataObject.ObjectType.qr])
         $0.showTorchButton = false

@@ -25,8 +25,9 @@ class VerificationViewController: UIViewController {
     @IBOutlet weak var verificationCodeCentre: UILabel!
     @IBOutlet weak var resendButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var CloseImage: UIImageView!
     
     init(_ apiClient: APIClient, sodium: SodiumHelper) {
         self.apiClient = apiClient
@@ -93,6 +94,8 @@ class VerificationViewController: UIViewController {
         verificationCode4.doordeckLabel()
         verificationCode5.doordeckLabel()
         verificationCode6.doordeckLabel()
+      
+        CloseImage.image = UIImage(named: "Close_Button")
     }
     
     @IBAction func sendCodeToServer(_ sender: Any) {
