@@ -36,6 +36,8 @@ class LockUnlockViewController: UIViewController {
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var CloseImage: UIImageView!
     
     init(_ lockVariableTemp: lockUnlockScreen,
          chain: CertificateChainClass, sodiumTemp: SodiumHelper) {
@@ -61,6 +63,10 @@ class LockUnlockViewController: UIViewController {
         }
         connectDevice(lockDetails)
         readyDevice(lockDetails)
+    }
+  
+    func setupUI() {
+      CloseImage.image = UIImage(named: "Close_Button")
     }
     
     func connectDevice(_ lockDestils: lockUnlockScreen) {
@@ -147,6 +153,10 @@ class LockUnlockViewController: UIViewController {
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
+
+    @IBAction func close() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 
@@ -166,5 +176,5 @@ extension LockUnlockViewController {
         setNewColour(UIColor.doordeckFailRed())
         loadingView.addFailAnimation()
     }
-    
+
 }

@@ -17,6 +17,8 @@ class BottomViewControllerQR: UIViewController {
     @IBOutlet weak var backgroundQRcodeImage: UIImageView!
     @IBOutlet weak var backgroundQRcodeImageCrossHair: UIImageView!
     @IBOutlet weak var QRCodeImage: UIImageView!
+    @IBOutlet weak var CloseImage: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
     
     lazy var reader = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
         $0.reader          = QRCodeReader(metadataObjectTypes: [AVMetadataObject.ObjectType.qr])
@@ -49,6 +51,8 @@ class BottomViewControllerQR: UIViewController {
         
         QRCodeImage.image = UIImage(named: "QR_Tile")
         QRCodeImage.setImageColor(color: UIColor.doordeckQuaternaryColour())
+      
+        CloseImage.image = UIImage(named: "Close_Button")
         
         backgroundQRcodeImageCrossHair.image = UIImage(named: "Qr_Background_Front_Light")
         backgroundQRcodeImageCrossHair.contentMode = .scaleAspectFill
@@ -102,5 +106,9 @@ extension BottomViewControllerQR: QRCodeReaderViewControllerDelegate {
             
             present(alert, animated: true, completion: nil)
         }
+    }
+  
+    @IBAction func close() {
+      self.dismiss(animated: true, completion: nil)
     }
 }
