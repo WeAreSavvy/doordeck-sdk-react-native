@@ -26,15 +26,16 @@ class RNDoordeckSdk: NSObject {
 
 extension RNDoordeckSdk: DoordeckProtocol {
   func verificationNeeded() {
-
+    print("Verification needed")
   }
 
   func newAuthTokenRequired() -> AuthTokenClass {
-      return AuthTokenClass("")
+    print("New auth token required")
+    return AuthTokenClass("")
   }
 
   func unlockSuccessful() {
-
+    print("Unlock successful")
   }
 
 }

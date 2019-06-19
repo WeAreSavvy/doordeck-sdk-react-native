@@ -144,7 +144,7 @@ class LockUnlockViewController: UIViewController {
         UIView.animate(withDuration: 0.30, delay: 0.5, options: .curveEaseIn, animations: { () -> Void in
             self.view.layoutIfNeeded()
         }, completion: nil)
-  }
+    }
   
 }
 

@@ -26,8 +26,8 @@ class VerificationViewController: UIViewController {
     @IBOutlet weak var resendButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var CloseImage: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
     
     init(_ apiClient: APIClient, sodium: SodiumHelper) {
         self.apiClient = apiClient
