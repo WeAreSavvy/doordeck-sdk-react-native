@@ -21,6 +21,7 @@ class BottomViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var QRCodeImage: UIImageView!
     @IBOutlet weak var CloseImage: UIImageView!
+    @IBOutlet weak var NFCImage: UIImageView!
     @IBOutlet weak var closeButton: UIButton!
   
     var delegate: quickEntryDelegate?
@@ -48,6 +49,8 @@ class BottomViewController: UIViewController {
         QRCodeImage.image = UIImage(named: "QR_Tile")
         QRCodeImage.setImageColor(color: UIColor.doordeckQuaternaryColour())
         CloseImage.image = UIImage(named: "Close_Button")
+        NFCImage.image = UIImage(named: "Scan_NFC")
+        NFCImage.setImageColor(color: UIColor.doordeckQuaternaryColour())
     }
     
     @objc func resetShowNFC() {

@@ -41,7 +41,7 @@ class QuickEntryViewController: UIViewController {
     }
     
     func setupUI() {
-        view.backgroundColor = .doordeckPrimaryColour()
+        view.backgroundColor = .doordeckQuaternaryColour()
     }
 }
 

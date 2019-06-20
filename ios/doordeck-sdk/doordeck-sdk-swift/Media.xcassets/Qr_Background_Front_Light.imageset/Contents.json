@@ -2,21 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Qr_Background_Front_Light.pdf",
-      "resizing" : {
-        "mode" : "9-part",
-        "center" : {
-          "mode" : "stretch",
-          "width" : 303,
-          "height" : 548
-        },
-        "cap-insets" : {
-          "bottom" : 0,
-          "top" : 138,
-          "right" : 46,
-          "left" : 48
-        }
-      }
+      "filename" : "Qr_Background_Front_Light.pdf"
     }
   ],
   "info" : {

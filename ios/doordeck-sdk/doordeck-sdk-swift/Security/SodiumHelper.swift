@@ -65,7 +65,7 @@ class SodiumHelper {
     /// Create new key pair and save it
     ///
     /// - Returns: key as a base64 string, contains private and public key
-    private func createAndSaveKeyPairReturnPublic() -> String? {
+    func createAndSaveKeyPairReturnPublic() -> String? {
         let keyPair = sodium.sign.keyPair()!
         let combinByteKey = keyPair.secretKey
         if combinByteKey.count == 64 {
