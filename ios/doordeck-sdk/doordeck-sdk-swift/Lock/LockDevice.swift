@@ -305,6 +305,9 @@ class LockDevice {
             self.deviceStatusUpdate(.unlockFail)
             self.deviceReset()
             self.deviceCompletion(nil, error: deviceError)
+          
+            // Temporary fix for invalid keychain tokens
+            let _ = sodium.createAndSaveKeyPairReturnPublic()
         }
     }
     

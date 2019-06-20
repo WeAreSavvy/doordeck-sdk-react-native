@@ -21,7 +21,7 @@ extension UIColor {
     /// - Returns: UIColor
     class func doordeckPrimaryColour () ->  UIColor {
         if UserDefaults().getDarkUI() {
-            return doordeckDarkPrimary()
+            return savvyDarkPrimary()
         } else {
             return doordeckLightGrey()
         }
@@ -36,7 +36,7 @@ extension UIColor {
     /// - Returns: UIColor
     class func doordeckSecondaryColour () ->  UIColor {
         if UserDefaults().getDarkUI() {
-            return doordeckDarkSecondary()
+            return savvyDarkSecondary()
         } else {
             return .white
         }
@@ -52,7 +52,7 @@ extension UIColor {
         if UserDefaults().getDarkUI() {
             return doordeckDarkGrey()
         } else {
-            return doordeckDarkPrimary()
+            return savvyDarkPrimary()
         }
     }
     
@@ -118,7 +118,7 @@ extension UIColor {
     /// - Returns: UIColor
     class func doordeckButtons () ->  UIColor {
         if UserDefaults().getDarkUI() {
-            return doordeckDarkTurquoise()
+            return savvyPink()
         } else {
             return doordeckLightTurquoise()
         }
@@ -180,7 +180,20 @@ extension UIColor {
     class func doordeckFailRed () ->  UIColor {
         return UIColor (red: 249.0/255.0, green: 50.0/255.0, blue: 81.0/255.0, alpha: 1.0)
     }
-    
+  
+    // Savvy colours
+    private class func savvyDarkPrimary () -> UIColor {
+      return UIColor (red: 27.0/255.0, green: 27.0/255.0, blue: 27.0/255.0, alpha: 1.0)
+    }
+  
+    private class func savvyDarkSecondary () -> UIColor {
+      return UIColor (red: 178.0/255.0, green: 178.0/255.0, blue: 178.0/255.0, alpha: 1.0)
+    }
+  
+    private class func savvyPink () -> UIColor {
+      return UIColor (red: 242.0/255.0, green: 28.0/255.0, blue: 79.0/255.0, alpha: 1.0)
+    }
+  
     /////////////////////////////////////////////////////////////////////
     //NewColour Pallet
     /////////////////////////////////////////////////////////////////////

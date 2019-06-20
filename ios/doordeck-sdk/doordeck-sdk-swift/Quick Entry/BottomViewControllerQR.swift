@@ -45,7 +45,12 @@ class BottomViewControllerQR: UIViewController {
     
     func setupUI() {
         view.backgroundColor = .doordeckPrimaryColour()
-        backgroundQRcodeImage.image = UIImage(named: "Qr_Background_Back_Light")
+      
+        backgroundQRcodeImageCrossHair.image = UIImage(named: "Qr_Background_Front_Light")
+        backgroundQRcodeImageCrossHair.setImageColor(color: UIColor.doordeckQuaternaryColour())
+        backgroundQRcodeImageCrossHair.contentMode = .scaleAspectFill
+      
+        backgroundQRcodeImage.image = UIImage(named: "Qr_Background")
         backgroundQRcodeImage.setImageColor(color: UIColor.doordeckPrimaryColour())
         backgroundQRcodeImage.contentMode = .scaleAspectFill
         
@@ -54,9 +59,6 @@ class BottomViewControllerQR: UIViewController {
       
         CloseImage.image = UIImage(named: "Close_Button")
       
-        backgroundQRcodeImageCrossHair.image = UIImage(named: "Qr_Background_Front_Light")
-        backgroundQRcodeImageCrossHair.contentMode = .scaleAspectFill
-        
         bottomLabel.attributedText = NSAttributedString.doordeckH3Bold(AppStrings.touchQR)
         descriptionLabel.attributedText = NSAttributedString.doordeckH4(AppStrings.touchQRMessage)
     }
