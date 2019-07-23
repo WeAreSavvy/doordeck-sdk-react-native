@@ -1,18 +1,21 @@
-# Doordeck React Native SDK 
+# WeAreSavvy fork of Doordeck React Native SDK 
 
 ## Prerequisites
 
 CocaoPods
 
-`$ sudo gem install cocoapods`
+```sh
+sudo gem install cocoapods
+```
 
 ## Getting started
 
-`$ npm install @doordeck/react-native-doordeck-sdk --save`
+1. Install via npm
 
-### Mostly automatic installation
+```sh
+yarn add @wearesavvy/react-native-doordeck-sdk
+```
 
-Coming soon - see manual install for now
 
 ### Manual installation
 
@@ -47,7 +50,26 @@ Coming soon - see manual install for now
 
 #### Android
 
-Coming soon
+1. Edit your app `gradle` file: 
+
+		minSdkVersion 21
+		android {
+			packagingOptions {
+				pickFirst("META-INF/atomicfu.kotlin_module")
+			}
+		}
+		repositories {
+			maven { url "https://jitpack.io" }
+		}
+
+2. Add following to your `gradle.properties`
+
+		android.useAndroidX=true
+		android.enableJetifier=true
+
+3.  To run your app, type `$ react-native run-android`
+
+
 
 
 ## Usage
@@ -59,5 +81,8 @@ doordeckSdk.initDoordeck(authToken)
 
 // Show unlock screen (NFC/QR reader)
 doordeckSdk.showUnlock()
+
+// Remove you AuthToken
+doordeckSdk.logout()
 ```
   
