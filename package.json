@@ -1,7 +1,7 @@
 {
-  "name": "@doordeck/react-native-doordeck-sdk",
-  "title": "React Native Doordeck Sdk",
-  "version": "1.1.0",
+  "name": "@wearesavvy/react-native-doordeck-sdk",
+  "title": "WeAreSavvy fork of the Doordeck React Native SDK",
+  "version": "1.0.0",
   "description": "React Native wrapper for the Doordeck SDK.",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/doordeck/doordeck-sdk-react-native.git",
-    "baseUrl": "https://github.com/doordeck/doordeck-sdk-react-native"
+    "url": "git+https://github.com/wearesavvy/react-native-doordeck-sdk.git",
+    "baseUrl": "https://github.com/wearesavvy/react-native-doordeck-sdk"
   },
   "keywords": [
     "doordeck",
@@ -23,14 +23,14 @@
   "licenseFilename": "LICENSE",
   "peerDependencies": {
     "react": "16.8.6",
-    "react-native": "^0.60.0"
+    "react-native": "^0.60.4"
   },
   "devDependencies": {
     "react": "^16.8.6",
-    "react-native": "^0.60.0"
+    "react-native": "^0.60.4"
   },
   "bugs": {
-    "url": "https://github.com/doordeck/doordeck-sdk-react-native/issues"
+    "url": "https://github.com/doordeck/react-native-doordeck-sdk/issues"
   },
   "homepage": "https://doordeck.com",
   "dependencies": {}

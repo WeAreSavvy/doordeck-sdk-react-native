@@ -1,24 +1,21 @@
-# Doordeck React Native SDK 
+# WeAreSavvy fork of Doordeck React Native SDK 
 
 ## Prerequisites
 
 CocaoPods
 
-`$ sudo gem install cocoapods`
+```sh
+sudo gem install cocoapods
+```
 
 ## Getting started
 
 1. Install via npm
 
-	`$ npm install @doordeck/react-native-doordeck-sdk --save`
+```sh
+yarn add @wearesavvy/react-native-doordeck-sdk
+```
 
-2. Link react-native files
-
-	`$ react-native link @doordeck/react-native-doordeck-sdk`
-
-### Mostly automatic installation
-
-Coming soon - see manual install for now
 
 ### Manual installation
 
@@ -84,5 +81,8 @@ doordeckSdk.initDoordeck(authToken)
 
 // Show unlock screen (NFC/QR reader)
 doordeckSdk.showUnlock()
+
+// Remove you AuthToken
+doordeckSdk.logout()
 ```
   
