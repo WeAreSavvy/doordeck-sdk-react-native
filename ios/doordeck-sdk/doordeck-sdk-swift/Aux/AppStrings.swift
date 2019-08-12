@@ -11,7 +11,7 @@ import Foundation
 struct AppStrings {
     static let error: String = NSLocalizedString("Error", comment: "")
     static let ok: String = NSLocalizedString("OK", comment: "")
-    static let readerNotSupported: String = NSLocalizedString("Reader not supported by the current device", comment: "")
+    static let readerNotSupported: String = NSLocalizedString("Reader not supported by the current device. Please check you have enabled your camera permissions. If this issue persists please contact us.", comment: "")
     static let NFCScanMessage: String = NSLocalizedString("Click to NFC Scan.", comment: "")
     static let touchNFC: String = NSLocalizedString("Touch NFC", comment: "")
     static let touchNFCMessage: String = NSLocalizedString("Touch the NFC Tile next to the door to unlock", comment: "")
